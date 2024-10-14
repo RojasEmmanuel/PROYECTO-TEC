@@ -1,0 +1,151 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Para separar los elementos */
+    align-items: center;
+    background-color: #78273E; /* Color de fondo */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.menu-icon {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-middle {
+    flex: 1;
+    text-align: center;
+}
+
+/* TEXTO BARRA */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-link.salir {
+    font-size: 16px; /* Cambia el tamaño de la letra del enlace "Salir" */
+    color: white; 
+    margin: 0 6px;
+}
+
+/* Opcional: Efecto hover para los links */
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* LOGO TECNM */
+.nav-logo {
+    width: 110px; /* Ajusta el tamaño de la imagen */
+    margin: 1px; /* Márgenes alrededor de la imagen */
+    border-radius: 15px; /* Bordes redondeados */
+    border: 2px solid #fff; /* Borde blanco o del color que prefieras */
+    margin: 0 60px;
+}
+
+/* IMAGEN PERFIL */
+.nav-right {
+    position: relative; /* Para el posicionamiento de la imagen de perfil */
+    top: 1px; /* Ajusta según sea necesario */
+    right: 10px; /* Ajusta según sea necesario */
+}
+
+.img-corner {
+    width: 40px; /* Tamaño de la imagen */
+    height: 40px; /* Tamaño de la imagen */
+    border-radius: 25%; /* Hacer la imagen circular */
+}
+
+/* CALENDARIO AJUSTES */
+.calendar-container {
+    display: flex;
+    flex-direction: column; /* Asegúrate de que el contenido esté en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-top: 80px; /* Espacio entre la barra de navegación y el contenedor del calendario */
+}
+
+iframe {
+    width: 100%;
+    max-width: 1000px; /* Puedes ajustar este valor según tu diseño */
+    height: 520px;
+    border: 0; /* Sin bordes */
+    margin-top: 60px;
+}
+
+.calendar-container {
+    background-color: #f5f5f5; /* Fondo del contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 1000px;
+    margin: 20px auto; /* Centrar en la página */
+}
+
+.dropdown-menu {
+    display: none; /* Ocultar el menú por defecto */
+    background-color: #78273E;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.695); 
+    position: absolute;
+    top: 80px; /* Ajustar según la altura de la barra de navegación */
+    left: 25px; /* Ajustar para que se alinee correctamente */
+    border-radius: 5px;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 14px 20px;
+}
+
+.dropdown-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu ul li:hover {
+    background-color: #a6a6a68b; /* Color al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    iframe {
+        height: 400px; /* Ajusta la altura para pantallas más pequeñas */
+    }
+}

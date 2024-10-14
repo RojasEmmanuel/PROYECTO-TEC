@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatos</title>
+    <link rel="stylesheet" href="Heven.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <!-- Ícono del menú -->
+            <button class="menu-icon" id="toggleMenu">
+                <i class="fa fa-bars"></i>
+            </button>
+            
+            <!-- Logo -->
+            <img src="TECNM_LOGO 2.png" alt="Logo Instituto" class="nav-logo">
+        </div>
+
+        <!-- Texto y links de la barra -->
+        <div class="nav-middle">
+            <a href="principal.html" class="nav-link">Página Principal</a>
+        </div>
+
+        <div class="TEXTO-SAL">
+            <!-- Botón salir -->
+            <a href="LOGIN.html" class="nav-link salir">Salir</a>
+            <!-- Ícono de perfil -->
+            <i class="fa fa-user nav-icon"></i>
+        </div>
+
+        <div class="nav-right">
+            <img src="PERFIL.jpg" alt="Imagen Esquina" class="img-corner">
+        </div>
+    </nav>
+
+    <!-- Menú Desplegable -->
+    <div class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li><a href="HistoEven.html">Historial de Eventos</a></li>
+            <li><a href="ReEvent.html">Registrar Evento</a></li>
+            <li><a href="Estudi.html">Estudiantes</a></li>
+            <li><a href="docentes.html">Docentes</a></li>
+            <li><a href="formatos.html">Formatos</a></li>
+        </ul>
+    </div>
+
+   
+
+    
+
+    <script>
+        // JavaScript para mostrar/ocultar el menú desplegable
+        document.getElementById('toggleMenu').addEventListener('click', function() {
+            var menu = document.getElementById('dropdownMenu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none'; // Ocultar menú
+            } else {
+                menu.style.display = 'block'; // Mostrar menú
+            }
+        });
+    </script>
+</body>
+</html>
