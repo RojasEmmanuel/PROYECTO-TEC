@@ -7,6 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: rgb(242, 242, 242);
 }
 
 /* Estilos de la barra de navegación */
@@ -28,6 +29,7 @@ body {
     margin-left: 15px;
 }
 
+/*MENU DESPLAZABLE DE OPCIONES*/
 .menu-icon {
     background: none;
     border: none;
@@ -70,7 +72,7 @@ body {
 .nav-logo {
     width: 110px; /* Ajusta el tamaño de la imagen */
     margin: 1px; /* Márgenes alrededor de la imagen */
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 10px; /* Bordes redondeados */
     border: 2px solid #fff; /* Borde blanco o del color que prefieras */
     margin: 0 60px;
 }
@@ -106,7 +108,8 @@ iframe {
 }
 
 .calendar-container {
-    background-color: #f5f5f5; /* Fondo del contenedor */
+    display: flex;
+    background-color: white; /* Fondo del contenedor */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
@@ -148,4 +151,20 @@ iframe {
     iframe {
         height: 400px; /* Ajusta la altura para pantallas más pequeñas */
     }
+}
+
+
+/* Estilo para el botón Agregar Evento */
+.add-event-btn {
+    background-color:black; /* Color verde */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    margin-left: 10px; /* Separación del resto de elementos */
+    font-size: 16px; /* Tamaño de texto */
+    margin-left: 10px; /* Separación */
+    margin-top: 40px;
+    align-items: flex-start;
 }
