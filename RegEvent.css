@@ -194,48 +194,141 @@ button {
     text-align: center; /* Centrar el texto */
     margin-bottom: 20px; /* Espacio debajo del título */
 }
+/* Estilo general del contenedor */
 
-/* Estilos de los labels y inputs */
-label {
-    margin-top: 10px; /* Espacio superior */
-    display: block; /* Hacer que cada label ocupe toda la línea */
-    margin-bottom: 5px; /* Espacio debajo de cada label */
+.container {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+
 }
+
+
+/* Estilo del encabezado */
+
+h1 {
+
+    text-align: center;
+
+    color: #333;
+
+    font-family: 'Arial', sans-serif;
+
+}
+
+
+/* Estilo de las etiquetas */
+
+label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #555;
+
+    font-weight: bold;
+
+}
+
+
+/* Estilo de los campos de entrada */
 
 input[type="text"],
+
 input[type="date"],
-textarea {
-    width: 100%; /* Ancho completo */
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 15px; /* Espacio inferior */
-    border: 2px solid #78273E; /* Borde de color */
-    border-radius: 5px; /* Bordes redondeados */
-}
 
 textarea {
-    resize: vertical; /* Permitir el cambio de tamaño vertical */
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    font-size: 16px;
+
 }
 
-/* Estilos para el grupo de botones */
+
+/* Estilo del área de texto */
+
+textarea {
+
+    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+
+}
+
+
+/* Estilo de los botones */
+
 .button-group {
-    display: flex; /* Usar flexbox */
-    justify-content: space-between; /* Espacio entre botones */
+
+    display: flex;
+
+    justify-content: space-between;
+
 }
 
-/* Estilos para los botones */
+
 button {
-    padding: 10px 15px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    color: white; /* Color del texto */
-    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
 }
+
 
 .cancel-button {
-    background-color: #dc3545; /* Color de fondo para el botón Cancelar */
+
+    background-color: #f44336; /* Rojo */
+
+    color: white;
+
 }
+
+
+.cancel-button:hover {
+
+    background-color: #d32f2f; /* Rojo oscuro */
+
+}
+
 
 .save-button {
-    background-color: #28a745; /* Color de fondo para el botón Guardar */
+
+    background-color: #4CAF50; /* Verde */
+
+    color: white;
+
 }
 
+
+.save-button:hover {
+
+    background-color: #388E3C; /* Verde oscuro */
+
+}

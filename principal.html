@@ -17,7 +17,8 @@
             </button>
             
             <!-- Logo -->
-            <img src="TECNM_LOGO 2.png" alt="Logo Instituto" class="nav-logo">
+            <img src="LogoTecnm.png" alt="Logo TecNM" class="nav-logo">
+            <img src="LogoITP.png" alt="Logo Instituto Tecnológico de Pochutla" class="nav-logo2">
         </div>
 
         <!-- Texto y links de la barra -->
@@ -29,11 +30,10 @@
             <!-- Botón salir -->
             <a href="LOGIN.html" class="nav-link salir">Salir</a>
             <!-- Ícono de perfil -->
-            <i class="fa fa-user nav-icon"></i>
         </div>
 
         <div class="nav-right">
-            <img src="PERFIL.jpg" alt="Imagen Esquina" class="img-corner">
+            <img src="user.png" alt="Imagen Esquina" class="img-corner">
         </div>
     </nav>
 
@@ -49,18 +49,119 @@
     </div>
     
 
-    <div>
-        <div class="calendar-container">  
-            <iframe src="https://calendar.google.com/calendar/embed?height=450&wkst=1&ctz=UTC&bgcolor=%23039BE5&title=EVENTOS%20PROXIMOS&showTitle=0&src=ZXMubWV4aWNhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D81B60" style="border:solid 1px #777" width="800" height="450" frameborder="0" scrolling="no"></iframe>
+    <div class="contenidoPagina">
+
+        <div class="seccion-superior">
+            <h1 class="saludo">Bienvenido al Panel de Administración 🚀</h1>
+            <p class="descripcion">Aquí podrás consultar y administrar información sobre los eventos realizados en el Instituto Tecnológico de Pochutla.</p>
+          
+            <div class="detalles">
+
+                <ul class="lista-herramientas">
+                    <li>✅ Registra un evento académico, social o cultural.</li>
+                    <li>✅ Notifica a la comunidad estudiantil.</li>
+                    <li>✅ Comparte el enlace de registro a los docentes.</li>
+                    <li>✅ Consulta, analiza y exporta los datos registrados.</li>
+                </ul>
+                
+
+
+                <div class="btnLink">
+                    <a href="#" class="boton" id="openModalBtn">Registrar un evento</a>
+                </div>
+
+                <!-- Modal -->
+                <div id="modalForm" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Registrar un Evento</h2>
+                        <form>
+                            <label for="event-name">Nombre del Evento:</label>
+                            <input type="text" id="event-name" name="event-name" required>
+                            
+                            <label for="event-date">Fecha del Evento:</label>
+                            <input type="date" id="event-date" name="event-date" required>
+                            
+                            <label for="event-description">Descripción del Evento:</label>
+                            <textarea id="event-description" name="event-description" rows="4" required></textarea>
+                            
+                            <label for="departments">Áreas y Departamentos Interesados:</label>
+                            <input type="text" id="departments" name="departments" required>
+                            
+                            <div class="button-group">
+                                <button type="button" class="cancel-button">Cancelar</button>
+                                <button type="submit" class="save-button">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+            
         </div>
+        
+        <div class="calendario">
+            <h3 class="subtitulo">Calendario de Eventos</h3>
+            <div class="calendar-header">
+                <button id="prevMonth">◀</button>
+                <span id="monthYear"></span>
+                <button id="nextMonth">▶</button>
+            </div>
+            <table class="calendar">
+                <thead>
+                    <tr>
+                        <th>Lun</th>
+                        <th>Mar</th>
+                        <th>Mié</th>
+                        <th>Jue</th>
+                        <th>Vie</th>
+                        <th>Sáb</th>
+                        <th>Dom</th>
+                    </tr>
+                </thead>
+                <tbody id="calendarBody">
+                    <!-- Días del mes -->
+                </tbody>
+            </table>
+        </div>
+           
     </div>
 
-      <!-- Sección derecha -->
-      <div class="nav-right">
-        <!-- Botón "Agregar Evento" -->
-        <button class="add-event-btn">AGREGAR EVENTO</button>
-
-
+    <footer style="background-color: #000; color: #ecf0f1; padding: 40px 0; font-size: 15px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 20px; flex-wrap: wrap;">
+            
+            <!-- Sección de versión y actualización -->
+            <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+                <div style="display: flex;">
+                    <p style="font-size: 16px; font-weight: bold; margin-right:10px; margin-bottom: 10px;">Versión actual del sistema: </p>
+                    <p style="color: #3498db; margin: 0;"> v1.0.1</p>
+                </div>
+                <p style="color: #95a5a6;">Última actualización: 24 de octubre de 2024</p>
+            </div>
+            
+            <!-- Sección de contacto de soporte -->
+            <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+                <p style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Soporte técnico:</p>
+                <p style="margin-bottom: 10px;">WhatsApp: <a href="https://wa.me/529581737977" target="_blank" style="color: #1abc9c; text-decoration: none;">+52 9581737977</a></p>
+                <p style="margin-bottom: 10px;">Correo electrónico: <a href="mailto:rojasemmanuel.1202@gmail.com" style="color: #1abc9c; text-decoration: none;">l211160104@pochutla.tecnm.mx</a></p>
+                <p style="margin-bottom: 10px;">Horario de atención: Lunes a viernes, de 8:00 am a 5:00 pm</p>
+            </div>
+            
+        </div>
+    
+        <!-- Separador -->
+        <div style="border-top: 1px solid #7f8c8d; margin-top: 20px; padding-top: 20px;">
+            <p style="text-align: center; margin: 0;">
+                <a href="/politica-privacidad" target="_blank" style="color: #ecf0f1; text-decoration: none; margin-right: 15px;">Política de privacidad</a> | 
+                <a href="/terminos-condiciones" target="_blank" style="color: #ecf0f1; text-decoration: none; margin-left: 15px;">Términos y condiciones</a>
+            </p>
+        </div>
+    </footer>
+    
+    
+    
 
     <script>
         // JavaScript para mostrar/ocultar el menú desplegable
@@ -72,6 +173,98 @@
                 menu.style.display = 'block'; // Mostrar menú
             }
         });
+    </script>
+
+    <script>
+
+        let today = new Date();
+        let currentMonth = today.getMonth();
+        let currentYear = today.getFullYear();
+        let selectedDate = today.getDate();
+
+        const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        const daysInWeek = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
+
+        document.getElementById("prevMonth").addEventListener("click", function() {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            renderCalendar(currentMonth, currentYear);
+        });
+
+        document.getElementById("nextMonth").addEventListener("click", function() {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar(currentMonth, currentYear);
+        });
+
+        function renderCalendar(month, year) {
+            const firstDay = (new Date(year, month)).getDay();
+            const daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+            const calendarBody = document.getElementById("calendarBody");
+            calendarBody.innerHTML = "";
+
+            document.getElementById("monthYear").textContent = `${monthNames[month]} ${year}`;
+
+            let date = 1;
+            let startDay = (firstDay + 6) % 7; // Ajuste para que el lunes sea el primer día
+            for (let i = 0; i < 6; i++) {
+                let row = document.createElement("tr");
+
+                for (let j = 0; j < 7; j++) {
+                    let cell = document.createElement("td");
+                    if (i === 0 && j < startDay) {
+                        cell.textContent = "";
+                    } else if (date > daysInMonth) {
+                        break;
+                    } else {
+                        cell.setAttribute("data-day", date);
+                        // Marca el día actual
+                        if (date === selectedDate && month === today.getMonth() && year === today.getFullYear()) {
+                            cell.classList.add("today");
+                        }
+                        date++;
+                    }
+                    row.appendChild(cell);
+                }
+
+                calendarBody.appendChild(row);
+            }
+        }
+
+        // Inicializa el calendario
+        renderCalendar(currentMonth, currentYear);
+
+    </script>
+
+    <script>
+        // Obtener elementos
+        var modal = document.getElementById("modalForm");
+        var btn = document.getElementById("openModalBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando el usuario hace clic en el botón, abrir el modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Cuando el usuario hace clic en la "X", cerrar el modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Cuando el usuario hace clic fuera del modal, cerrar el modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 
 
