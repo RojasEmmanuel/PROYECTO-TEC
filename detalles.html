@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Evento</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eaeaea;
+            margin: 0;
+            padding: 20px;
+        }
+        .evento {
+            background: linear-gradient(135deg, #ffffff, #f9f9f9);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: cal(100% - 15%); /* Ancho completo de la pantalla */
+            margin: auto;
+            transition: transform 0.2s;
+        }
+        .evento:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #333;
+            font-size: 26px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        td {
+            padding: 8px 12px;
+            font-size: 16px;
+            color: #555;
+            border-bottom: 1px solid #ddd;
+        }
+        td.label {
+            font-weight: bold;
+            color: #333;
+            width: 30%;
+        }
+        .responsables {
+            color: #007BFF;
+            text-decoration: underline;
+        }
+        .descripcion {
+            margin-top: 20px;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="evento">
+    <h2>Nombre del Evento</h2>
+    
+    <table>
+        <tr>
+            <td class="label">Fecha:</td>
+            <td>15 de noviembre de 2024</td>
+        </tr>
+        <tr>
+            <td class="label">Lugar:</td>
+            <td>Auditorio Principal, Ciudad XYZ</td>
+        </tr>
+        <tr>
+            <td class="label">Responsables:</td>
+            <td><span class="responsables">Juan Pérez, Ana Gómez, Carlos López</span></td>
+        </tr>
+    </table>
+    
+    <div class="descripcion">
+        <p>Este evento reúne a expertos y entusiastas de la tecnología para explorar los últimos avances en inteligencia artificial, 
+        desarrollo web y tecnologías emergentes. A través de conferencias y talleres interactivos, los participantes podrán adquirir 
+        conocimientos y ampliar sus redes de contactos en un ambiente colaborativo.</p>
+    </div>
+</div>
+
+</body>
+</html>
