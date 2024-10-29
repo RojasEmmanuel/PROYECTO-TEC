@@ -1,11 +1,343 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formatos</title>
-    <link rel="stylesheet" href="Heven.css">
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+
+        }
+        /* Estilos de la barra de navegación */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Para separar los elementos */
+            align-items: center;
+            background-color: #78273E; /* Color de fondo */
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+
+        /*MENU DESPLAZABLE DE OPCIONES*/
+        .menu-icon {
+            background: none;
+            border: none;
+            font-size: 22px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .nav-middle {
+            flex: 1;
+            text-align: center;
+        }
+
+
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .nav-link.salir {
+            font-size: 16px; /* Cambia el tamaño de la letra del enlace "Salir" */
+            color: white; 
+            margin: 0 6px;
+            margin-right: 20px;
+        }
+
+        /* Opcional: Efecto hover para los links */
+        .navbar a:hover {
+            text-decoration: none;
+            color: #eee;
+        }
+
+        /* LOGO TECNM */
+        .nav-logo {
+            width: 120px; /* Ajusta el tamaño de la imagen */
+            margin-left: 10px; 
+        }
+
+
+        /* LOGO ITP */
+        .nav-logo2 {
+            width: 66px; /* Ajusta el tamaño de la imagen */
+            margin-left: 20px; /* Márgenes alrededor de la imagen */
+        }
+
+        /* IMAGEN PERFIL */
+        .nav-right {
+            position: relative; /* Para el posicionamiento de la imagen de perfil */
+            top: 1px; /* Ajusta según sea necesario */
+            right: 10px; /* Ajusta según sea necesario */
+        }
+
+        .img-corner {
+            width: 30px; /* Tamaño de la imagen */
+            height: 30px; /* Tamaño de la imagen */
+            /*border-radius: 25%; /* Hacer la imagen circular */
+        }
+
+
+                
+        .dropdown-menu {
+            display: none; /* Ocultar el menú por defecto */
+            background-color: #78273E;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.695); 
+            position: absolute;
+            top: 80px; /* Ajustar según la altura de la barra de navegación */
+            left: 25px; /* Ajustar para que se alinee correctamente */
+            border-radius: 5px;
+            z-index: 1000; /* Asegura que esté encima de otros elementos */
+        }
+
+        .dropdown-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* TEXTO BARRA */
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-family: 'Roboto Black';
+            font-size: 22px;
+        }
+
+
+
+        .dropdown-menu ul li {
+            padding: 14px 20px;
+            font-family: "Roboto";
+            font-size: 15px;
+        }
+
+        .dropdown-menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-menu ul li:hover {
+            background-color: #a6a6a68b; /* Color al pasar el mouse */
+        }
+
+    
+        /* Contenedor principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            padding: 15px 0;
+            z-index: 1;
+        }
+
+        .header h2 {
+            font-size: 1.7em;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .header button:hover {
+            background-color: #0056b3;
+        }
+
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            max-height: 60vh; /* Altura máxima para el contenedor de lista */
+            overflow-y: auto; /* Scroll vertical */
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            margin-bottom: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            width: 60%;
+        }
+
+        .file-info img {
+            width: 40px;
+            margin-right: 15px;
+        }
+
+        .file-info span {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .file-date {
+            font-size: 0.9em;
+            color: #666;
+            margin-left: 10px;
+        }
+
+        .file-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .file-actions button, .file-actions .download-btn {
+            padding: 8px 12px;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .file-actions .download-btn {
+            background-color: #28a745;
+        }
+
+        .file-actions .download-btn:hover {
+            background-color: #218838;
+        }
+
+        .file-actions .delete-btn {
+            background-color: #dc3545;
+        }
+
+        .file-actions .delete-btn:hover {
+            background-color: #c82333;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Asegura que el modal esté encima de otros elementos */
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .modal-content input, .modal-content button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+        }
+
+        .modal-content input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .modal-content .save-btn {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: none;
+        }
+
+        .modal-content .save-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .close-btn {
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .close-btn:hover {
+            background-color: #5a6268;
+        }
+
+        /* Animación del modal */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .centro{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    </style>
 </head>
 <body>
     <!-- Barra de Navegación -->
@@ -17,7 +349,8 @@
             </button>
             
             <!-- Logo -->
-            <img src="TECNM_LOGO 2.png" alt="Logo Instituto" class="nav-logo">
+            <img src="LogoTecnm.png" alt="Logo TecNM" class="nav-logo">
+            <img src="LogoITP.png" alt="Logo Instituto Tecnológico de Pochutla" class="nav-logo2">
         </div>
 
         <!-- Texto y links de la barra -->
@@ -29,11 +362,10 @@
             <!-- Botón salir -->
             <a href="LOGIN.html" class="nav-link salir">Salir</a>
             <!-- Ícono de perfil -->
-            <i class="fa fa-user nav-icon"></i>
         </div>
 
         <div class="nav-right">
-            <img src="PERFIL.jpg" alt="Imagen Esquina" class="img-corner">
+            <img src="user.png" alt="Imagen Esquina" class="img-corner">
         </div>
     </nav>
 
@@ -48,6 +380,65 @@
         </ul>
     </div>
 
+    <br><br><br><br><br>
+
+    <div class="centro">
+        <div class="container">
+            <div class="header">
+                <h2>Lista de formatos en PDF</h2>
+                <button onclick="openModal()">Agregar PDF</button>
+            </div>
+            <ul class="file-list" id="fileList">
+                <!-- Lista de archivos PDF cargados -->
+            </ul>
+        </div>
+    
+        <!-- Modal para agregar archivo -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h3>Agregar Nuevo PDF</h3>
+                <input type="text" id="fileName" placeholder="Nombre del archivo" required>
+                <input type="file" id="fileInput" accept=".pdf" required>
+                <button class="save-btn" onclick="addFile()">Guardar</button>
+                <button class="close-btn" onclick="closeModal()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer style="background-color: #000; color: #ecf0f1; padding: 40px 0; font-size: 15px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 20px; flex-wrap: wrap;">
+            
+            <!-- Sección de versión y actualización -->
+            <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+                <div style="display: flex;">
+                    <p style="font-size: 16px; font-weight: bold; margin-right:10px; margin-bottom: 10px;">Versión actual del sistema: </p>
+                    <p style="color: #3498db; margin: 0;"> v1.0.1</p>
+                </div>
+                <p style="color: #95a5a6;">Última actualización: 24 de octubre de 2024</p>
+            </div>
+            
+            <!-- Sección de contacto de soporte -->
+            <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+                <p style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">Soporte técnico:</p>
+                <p style="margin-bottom: 10px;">WhatsApp: <a href="https://wa.me/529581737977" target="_blank" style="color: #1abc9c; text-decoration: none;">+52 9581737977</a></p>
+                <p style="margin-bottom: 10px;">Correo electrónico: <a href="mailto:rojasemmanuel.1202@gmail.com" style="color: #1abc9c; text-decoration: none;">l211160104@pochutla.tecnm.mx</a></p>
+                <p style="margin-bottom: 10px;">Horario de atención: Lunes a viernes, de 8:00 am a 5:00 pm</p>
+            </div>
+            
+        </div>
+    
+        <!-- Separador -->
+        <div style="border-top: 1px solid #7f8c8d; margin-top: 20px; padding-top: 20px;">
+            <p style="text-align: center; margin: 0;">
+                <a href="/politica-privacidad" target="_blank" style="color: #ecf0f1; text-decoration: none; margin-right: 15px;">Política de privacidad</a> | 
+                <a href="/terminos-condiciones" target="_blank" style="color: #ecf0f1; text-decoration: none; margin-left: 15px;">Términos y condiciones</a>
+            </p>
+        </div>
+    </footer>
+
+
     <script>
         // JavaScript para mostrar/ocultar el menú desplegable
         document.getElementById('toggleMenu').addEventListener('click', function() {
@@ -60,6 +451,58 @@
         });
     </script>
 
+    <script>
+        const fileList = document.getElementById('fileList');
+        const modal = document.getElementById('modal');
+
+        function openModal() {
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        function addFile() {
+            const fileName = document.getElementById('fileName').value;
+            const fileInput = document.getElementById('fileInput').files[0];
+            const currentDate = new Date().toLocaleDateString('es-ES', {
+                day: '2-digit', month: '2-digit', year: 'numeric'
+            });
+
+            if (fileName && fileInput && fileInput.type === "application/pdf") {
+                const fileUrl = URL.createObjectURL(fileInput);
+
+                const fileItem = document.createElement('li');
+                fileItem.classList.add('file-item');
+
+                fileItem.innerHTML = `
+                    <div class="file-info">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/pdf.png" alt="PDF Icon">
+                        <span>${fileName}</span>
+                        <span class="file-date">Subido el: ${currentDate}</span>
+                    </div>
+                    <div class="file-actions">
+                        <a href="${fileUrl}" download="${fileName}.pdf">
+                            <button class="download-btn">Descargar</button>
+                        </a>
+                        <button class="delete-btn" onclick="removeFile(this)">Eliminar</button>
+                    </div>
+                `;
+
+                fileList.appendChild(fileItem);
+                closeModal();
+                document.getElementById('fileName').value = '';
+                document.getElementById('fileInput').value = '';
+            } else {
+                alert('Por favor, completa todos los campos y asegúrate de que el archivo es un PDF');
+            }
+        }
+
+        function removeFile(button) {
+            button.parentElement.parentElement.remove();
+        }
+    </script>
 
 
 </body>
