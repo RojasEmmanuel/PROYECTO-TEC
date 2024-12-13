@@ -163,6 +163,13 @@
         }
 
 
+        .descripcionEvento{
+            margin-left: 100px;
+            margin-right: 100px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        
         .evento {
             border-radius: 12px;
            /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);*/
@@ -488,10 +495,22 @@
         .evento, .estadisticas {
             background: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            width: calc(50% - 10px); /* Ancho de cada div en 50% */
+            width: calc(100% - 10px); /* Ancho de cada div en 50% */
             box-sizing: border-box;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .fechaEvento{
+            text-align: center;
+            color: slategrey;
+        }
+
+        .lugar{
+            text-align: center;
+            margin-top: 20px;
+            color: slategrey;
         }
 
     </style>
@@ -542,58 +561,43 @@
 
     <div class="ContenidoPagina">
 
-        <h2 class="NombreEvento">NOMBRE DEL EVENTO</h2>
+        <h2 class="NombreEvento">INICIO DE CLASES</h2>
+        <p class="fechaEvento">26 de Agosto del 2024</p>
+        <p class="lugar">Explanada del Instituto 📌</p>
        <div class="container">
-
-         
-        <div class="evento">
-            <h2 class="subtitulo">Detalles del evento</h2>
-            <table>
-                <tr>
-                    <td class="label">Fecha:</td>
-                    <td>15 de noviembre de 2024</td>
-                </tr>
-                <tr>
-                    <td class="label">Lugar:</td>
-                    <td>Auditorio Principal, Ciudad XYZ</td>
-                </tr>
-                <tr>
-                    <td class="label">Responsables:</td>
-                    <td><span class="responsables">Juan Pérez, Ana Gómez, Carlos López</span></td>
-                </tr>
-            </table>
-            
-            <div class="descripcion">
-                <p>Este evento reúne a expertos y entusiastas de la tecnología para explorar los últimos avances en inteligencia artificial, 
-                desarrollo web y tecnologías emergentes. A través de conferencias y talleres interactivos, los participantes podrán adquirir 
-                conocimientos y ampliar sus redes de contactos en un ambiente colaborativo.</p>
-            </div>
+        <br>    
+        <div class="descripcionEvento">
+            <p><b>Descripción</b></p>
+            <p>Este evento reúne a la comunidad estudiantil para realiar un programa conmemorativo al inicio de clases, 
+            llevando a cabo un programa civico, programa social y eventos deportivos. Se requiere que participen todos los estudiantes de las diferentes carreras
+            así como todo el personal administrativo.</p>
         </div>
 
 
-        <div class="estadisticas">
-            <h2 class="subtitulo">Estadísticas</h2>
+        <div class="estadisticas" style="display: flex; align-items: center; justify-content: center;">
+
             <table class="datosEstadisticos">
+                <caption><b>Estadisticas</b></caption>
                 <tr>
                     <td>Total de Estudiantes</td>
-                    <td>90</td>
+                    <td>560</td>
                 </tr>
                 <tr>
-                    <td>  Total de Estudiantes Hombres</td>
-                    <td>60</td>
+                    <td>Total de Estudiantes Hombres</td>
+                    <td>340</td>
                 </tr>
                 <tr>
                     <td>Total de Estudiantes Mujeres</td>
-                    <td>90</td>
+                    <td>220</td>
                 </tr>
                 
                 <tr>
                     <td>Total de Docentes</td>
-                    <td>14</td>
+                    <td>18</td>
                 </tr>
                 <tr>
                     <td>Porcentaje de Asistencia (según la matrícula)</td>
-                    <td>60%</td>
+                    <td>70%</td>
                 </tr>
             </table>
         </div>
