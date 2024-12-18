@@ -1,94 +1,3 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F2F3F7;
-}
-
-/* Estilos de la barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-between; /* Para separar los elementos */
-    align-items: center;
-    background-color: #78273E; /* Color de fondo */
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-}
-
-/*MENU DESPLAZABLE DE OPCIONES*/
-.menu-icon {
-    background: none;
-    border: none;
-    font-size: 22px;
-    color: white;
-    cursor: pointer;
-}
-
-.nav-middle {
-    flex: 1;
-    text-align: center;
-}
-
-
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.nav-link.salir {
-    font-size: 16px; /* Cambia el tamaño de la letra del enlace "Salir" */
-    color: white; 
-    margin: 0 6px;
-    margin-right: 20px;
-}
-
-/* Opcional: Efecto hover para los links */
-.navbar a:hover {
-    text-decoration: none;
-    color: #eee;
-}
-
-/* LOGO TECNM */
-.nav-logo {
-    width: 120px; /* Ajusta el tamaño de la imagen */
-    margin-left: 10px; 
-}
-
-
-/* LOGO ITP */
-.nav-logo2 {
-    width: 66px; /* Ajusta el tamaño de la imagen */
-    margin-left: 20px; /* Márgenes alrededor de la imagen */
-}
-
-/* IMAGEN PERFIL */
-.nav-right {
-    position: relative; /* Para el posicionamiento de la imagen de perfil */
-    top: 1px; /* Ajusta según sea necesario */
-    right: 10px; /* Ajusta según sea necesario */
-}
-
-.img-corner {
-    width: 30px; /* Tamaño de la imagen */
-    height: 30px; /* Tamaño de la imagen */
-    /*border-radius: 25%; /* Hacer la imagen circular */
-}
 
 /* CALENDARIO AJUSTES */
 .calendar-container {
@@ -99,16 +8,9 @@ body {
     margin-top: 0px; /* Espacio entre la barra de navegación y el contenedor del calendario */
 }
 
-iframe {
-    width: 100%;
-    max-width: 1200px; /* Puedes ajustar este valor según tu diseño */
-    height: 700px;
-    border: 0; /* Sin bordes */
-    margin-top: 60px;
-}
 
 .contenidoPagina {
-    
+    font-family: "Roboto";
     background-color: white; /* Fondo del contenedor */
     padding: 20px;
     border-radius: 10px;
@@ -119,67 +21,6 @@ iframe {
     margin-top: 80px;
     height: 100%;
 }
-
-.dropdown-menu {
-    display: none; /* Ocultar el menú por defecto */
-    background-color: #78273E;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.695); 
-    position: absolute;
-    top: 80px; /* Ajustar según la altura de la barra de navegación */
-    left: 25px; /* Ajustar para que se alinee correctamente */
-    border-radius: 5px;
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
-}
-
-.dropdown-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-menu ul li {
-    padding: 14px 20px;
-}
-
-.dropdown-menu ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.dropdown-menu ul li:hover {
-    background-color: #a6a6a68b; /* Color al pasar el mouse */
-}
-
-@media (max-width: 768px) {
-    iframe {
-        height: 400px; /* Ajusta la altura para pantallas más pequeñas */
-    }
-}
-
-
-/* Estilo para el botón Agregar Evento */
-.add-event-btn {
-    background-color:black; /* Color verde */
-    color: white; /* Color de texto blanco */
-    border: none; /* Sin borde */
-    padding: 10px 10px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor de mano */
-    margin-left: 10px; /* Separación del resto de elementos */
-    font-size: 16px; /* Tamaño de texto */
-    margin-left: 10px; /* Separación */
-    margin-top: 40px;
-    align-items: flex-start;
-}
-
-/* TEXTO BARRA */
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-family: 'Roboto Black';
-    font-size: 22px;
-}
-
 
 .saludo {
     margin-top: 20px;
@@ -205,13 +46,6 @@ iframe {
     list-style: none;
 }
 
-.boton {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
 .btnLink{
     text-align: right;
@@ -242,23 +76,6 @@ li{
     font-weight: bold;
 }
 
-button {
-    background-color: rgb(247, 247, 247);
-    border: none;
-    border-radius: 50%;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #e0e0e0;
-}
-
-button:focus {
-    outline: none;
-}
 
 table.calendar {
     width: 100%;
@@ -315,157 +132,149 @@ table.calendar td.today::before {
     margin-top: 0px;
 }
 
-.boton {
-    text-decoration: none;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
+/*ESTILO PARA EL FORMULARIO MODAL....*/
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    transform: scale(0.8);
+    font-family: "Roboto";
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.show .modal {
+    transform: scale(1);
+}
+
+.modal h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
     border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.form-group select {
+    background-color: #ffffff;
+}
+
+.form-group button {
+    width: 48%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.boton:hover {
+.form-group button:hover {
     background-color: #0056b3;
 }
 
-/* Estilos del modal */
-.modal {
-    display: none; /* Se mantendrá oculto por defecto */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
-    overflow: hidden;
+.form-group .cancel-button {
+    background-color: #dc3545;
 }
 
-.modal-content {
-    background-color: white;
-    margin: auto;
-    margin-top: 5%;
-    padding: 20px;
-    border-radius: 10px;
-    width: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+.form-group .cancel-button:hover {
+    background-color: #a71d2a;
 }
 
-.close {
-    color: #aaa;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-}
-
-/* Estilo del formulario */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label, input {
-    margin: 10px 0;
-}
-
-input[type="submit"] {
-    padding: 10px;
-    background-color: #007bff;
-   /* color: white;*/
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-
-/*ESTILO DE LOS ELEMENTOS DEL FORMULARIO*/
-
-/* Estilo del encabezado */
-
-h1 {
-    text-align: center;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-}
-
-
-/* Estilo de las etiquetas */
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    font-weight: bold;
-}
-
-
-/* Estilo de los campos de entrada */
-input[type="text"],
-input[type="date"],
-
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-
-/* Estilo del área de texto */
-
-textarea {
-    resize: vertical; /* Permite cambiar el tamaño verticalmente */
-}
-
-
-/* Estilo de los botones */
 .button-group {
     display: flex;
     justify-content: space-between;
 }
 
-
-button {
-    padding: 10px 15px;
+.open-modal-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.cancel-button {
-    background-color: #f44336; /* Rojo */
-    color: white;
+.open-modal-button:hover {
+    background-color: #0056b3;
 }
 
-
-.cancel-button:hover {
-   background-color: #d32f2f; /* Rojo oscuro */
-}
-
-.save-button {
-    background-color: #4CAF50; /* Verde */
-    color: white;
-}
-
-.save-button:hover {
-    background-color: #388E3C; /* Verde oscuro */
-}
 
 /* From Uiverse.io by gagan-gv */ 
 .btn {
@@ -590,7 +399,6 @@ background: #78273E;
 transform: translateX(3px);
 }
 
-
 .containerNotificaciones{
     padding: 0px; /* Espaciado interno */
     background-color: white; /* Fondo blanco */
@@ -605,4 +413,89 @@ transform: translateX(3px);
     display: flex; /* Usar flexbox */
     justify-content: space-around; /* Espacio entre los elementos */
     flex-wrap: wrap; /* Permitir que los elementos se ajusten */
+}
+
+/*ESTILO DE LA TARJETA DE INFORMACIÓN DE LOS EVENTOS PROXIMOS*/
+.show-event-button {
+    padding: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color:#78273E;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+.show-event-button:hover {
+    color: #864154;
+}
+.modal-overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal2 {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.modal-header2 {
+    background-color: #78273E;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+}
+.modal-header2 h1 {
+    margin: 0;
+    font-size: 20px;
+}
+.modal-body2 {
+    padding: 16px;
+}
+.modal-body2 p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.modal-body2 .description {
+    margin-top: 16px;
+    font-style: italic;
+    color: #555;
+}
+.modal-footer2 {
+    background-color: #f4f4f9;
+    padding: 12px;
+    text-align: right;
+}
+.modal-footer2 button {
+    background-color: #78273E;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.modal-footer2 button:hover {
+    background-color: #953f58
 }
